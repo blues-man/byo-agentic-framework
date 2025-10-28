@@ -1,0 +1,4 @@
+*.venv
+*claude*
+*tests*
+.vscode/settings.json
