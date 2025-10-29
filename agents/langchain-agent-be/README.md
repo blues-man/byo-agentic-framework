@@ -35,13 +35,16 @@ MCP_WEATHER_SERVER_URL=http://mcp-weather-lls-demo.apps.XXX/sse
 ### 3. Run the Server
 
 ```bash
-# Using Python directly (recommended)
+# Quick start with startup script (recommended)
+./start.sh
+
+# Or using Python directly
 python app.py
 
-# Or with uvicorn from venv (if needed)
+# Or with uvicorn from venv
 ../../.venv/bin/uvicorn app:app --reload --port 8080
 
-# Or activate venv first, then run
+# Or activate venv first, then run uvicorn
 cd ../..
 source .venv/bin/activate
 cd agents/langchain-agent-be
@@ -49,6 +52,8 @@ uvicorn app:app --reload --port 8080
 ```
 
 The server will start on `http://localhost:8080`
+
+**Note:** The `start.sh` script automatically checks dependencies and environment variables before starting.
 
 ## API Endpoints
 
