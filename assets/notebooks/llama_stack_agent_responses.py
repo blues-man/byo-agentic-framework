@@ -18,10 +18,10 @@ Architecture:
          │ client.responses.create()
          ▼
 ┌─────────────────┐   ┌──────────────────────┐
-│  Llama Stack    │   │  MCP Server          │
+│  Llama Stack    │   │  MCP Servers         │
 │  Responses API  │   │  (Server-side MCP)   │
-│  - vLLM Engine  │──▶│  - Weather Service   │
-│  - Inference    │   │  - Kubernetes API    │
+│  - vLLM Engine  │──▶│ - Customer Service  │
+│  - Inference    │   │  - Finance Service   │
 │  - Tool Calling │   │  - Tool Execution    │
 └─────────────────┘   └──────────────────────┘
 
@@ -196,7 +196,7 @@ def customer_tool_example(client, prompt = "Search customer with name Anabela Do
     print("=" * 80)
     print(agent_responses.output_text)
 
-# --- Agentic Tool Execution with Customer MCP Server ---
+# --- Agentic Tool Execution with Finance MCP Server ---
 def finance_tool_example(client, prompt = "Get order history for customer TRADH"):
     """
     Test the agent with a customer search query. The agent will:
