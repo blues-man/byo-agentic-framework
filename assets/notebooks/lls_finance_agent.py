@@ -182,7 +182,7 @@ def finance_tool_example(client, prompt = "Get order history for customer TRADH"
         elif output.type == "mcp_call":
             print(f"  Tool called: {output.name}")
             print(f"  Arguments: {output.arguments}")
-            print(f"  Result: {output.output[:200]}...")  # Truncate long output
+            #print(f"  Result: {output.output[:200]}...")  # Truncate long output
             if output.error:
                 print(f"  Error: {output.error}")
 
@@ -213,7 +213,7 @@ def main():
     # Uncomment the examples you want to run:
 
     # basic_query(client)
-    finance_tool_example(client, "Get order history for customer TRADH")
+    finance_tool_example(client, "Get order history for customer LONEP")
     print("\n" + "=" * 80)
     print("Script completed!")
     print("=" * 80)

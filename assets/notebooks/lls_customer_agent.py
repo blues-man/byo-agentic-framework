@@ -182,7 +182,7 @@ def customer_tool_example(client, prompt = "Search customer with name Anabela Do
         elif output.type == "mcp_call":
             print(f"  Tool called: {output.name}")
             print(f"  Arguments: {output.arguments}")
-            print(f"  Result: {output.output[:200]}...")  # Truncate long output
+            #print(f"  Result: {output.output[:200]}...")  # Truncate long output
             if output.error:
                 print(f"  Error: {output.error}")
 
