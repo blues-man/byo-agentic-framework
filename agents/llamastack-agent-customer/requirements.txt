@@ -1,0 +1,6 @@
+# Requirements for llama_stack_agent_responses.py
+# Llama Stack agent responses standalone script
+
+# Core dependencies
+llama-stack-client==0.3.1
+python-dotenv==1.2.1
